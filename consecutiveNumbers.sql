@@ -44,7 +44,7 @@ select distinct Num as ConsecutiveNums  from (
     @prev := Num from Logs, (select @counter := 1, @prev := null) vars
 ) sq where counter >= 3;
 
-OR
+#OR
 
 SELECT DISTINCT l1.Num As ConsecutiveNums
 FROM Logs l1, Logs l2, Logs l3
